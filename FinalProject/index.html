@@ -1,60 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trail Camp</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campsite</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 
 <body class="camp-page day-mode">
 
-  <header class="top-bar">
-    <h1>Trail Camp</h1>
-    <p>A small interactive camping trip</p>
-  </header>
+    <main class="scene camp-scene">
 
-  <main class="scene camp-scene">
+        <!-- background parts -->
+        <div class="sky"></div>
+        <div class="ground"></div>
 
-    <!-- background parts -->
-    <div class="sky"></div>
-    <div class="ground"></div>
+        <!-- camp objects -->
+        <button class="camp-object tent-bag" id="tentObject">
+            Tent Bag
+        </button>
 
-    <!-- camp objects -->
-    <button class="camp-object tent-bag" id="tentObject">
-      Tent Bag
-    </button>
+        <button class="camp-object backpack" id="backpackObject">
+            Backpack
+        </button>
 
-    <button class="camp-object backpack" id="backpackObject">
-      Backpack
-    </button>
+        <button class="camp-object dropped-map hidden" id="droppedMap">
+            Map
+        </button>
 
-    <button class="camp-object dropped-map hidden" id="droppedMap">
-      Map
-    </button>
+        <button class="camp-object fire-ring" id="fireRing">
+            Empty Fireplace
+        </button>
 
-    <button class="camp-object fire-ring" id="fireRing">
-      Empty Fireplace
-    </button>
+        <!-- popup map window -->
+        <div class="popup hidden" id="mapPopup">
+            <div class="popup-content">
+                <button class="close-button" id="closeMap">X</button>
 
-    <!-- popup map window -->
-    <div class="popup hidden" id="mapPopup">
-      <div class="popup-content">
-        <button class="close-button" id="closeMap">X</button>
+                <h2>Map</h2>
+                <p>place holder</p>
 
-        <h2>Map</h2>
-        <p>place holder</p>
-
-        <div class="map-links">
-          <a href="forest.html">Forest</a>
-          <a href="river.html">River</a>
-          <a href="beach.html">Beach</a>
+                <div class="map-links">
+                    <a href="forest.html">Forest</a>
+                    <a href="river.html">River</a>
+                    <a href="beach.html">Beach</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-  </main>
+    </main>
 
 </body>
+
 </html>
