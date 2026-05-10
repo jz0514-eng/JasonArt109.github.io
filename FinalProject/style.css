@@ -139,3 +139,15 @@ body {
   margin-top: 30px;
   color: black;
 }
+
+.dark .scene-image {
+  filter: brightness(0.25);
+}
+
+.dark .object-image {
+  filter: brightness(0.45);
+}
+
+.dark .glow {
+  filter: brightness(1.2) drop-shadow(0 0 8px yellow);
+}

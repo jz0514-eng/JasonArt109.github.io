@@ -4,7 +4,9 @@ let tentButton = document.getElementById("tentButton");
 let fireButton = document.getElementById("fireButton");
 let upButton = document.getElementById("upButton");
 let rightButton = document.getElementById("rightButton");
+let fishButton = document.getElementById("fishButton");
 
+let fish = document.getElementById("fish");
 let tent = document.getElementById("tent");
 let fire = document.getElementById("fire");
 let fireLitImage = document.getElementById("fireLit");
@@ -44,7 +46,19 @@ if (tentButton) {
   };
 
   tentButton.onclick = function () {
-    showMessage("You are too hungry to sleep. Maybe you should find something to eat first.");
+    let hasEaten = localStorage.getItem("mealCooked");
+
+    if (hasEaten == "true") {
+      page.classList.add("dark");
+      showMessage("Goodnight...");
+
+      setTimeout(function () {
+        localStorage.clear();
+        window.location.href = "index.html";
+      }, 2500);
+    } else {
+      showMessage("You are too hungry to sleep. Maybe you should find something to eat first.");
+    }
   };
 }
 
@@ -77,6 +91,7 @@ if (fireButton) {
     } else if (hasWood == "true" && hasFish == "true") {
       fireLitImage.classList.remove("hidden");
       showMessage("You cook the fish over the campfire.");
+      localStorage.setItem("mealCooked", "true");
     } else if (hasWood == "true") {
       fireLitImage.classList.remove("hidden");
       showMessage("Maybe you could go catch some fish for food.");
@@ -143,11 +158,26 @@ if (downButton) {
 }
 
 
-let fishButton = document.getElementById("fishButton");
-
 if (fishButton) {
+  if (localStorage.getItem("fishFound") == "true") {
+    fish.classList.add("hidden");
+    fishButton.classList.add("hidden");
+  }
+
+  fishButton.onmouseover = function () {
+    fish.classList.add("glow");
+  };
+
+  fishButton.onmouseout = function () {
+    fish.classList.remove("glow");
+  };
+
   fishButton.onclick = function () {
     localStorage.setItem("fishFound", "true");
+
+    fish.classList.add("hidden");
+    fishButton.classList.add("hidden");
+
     showMessage("You caught a fish.");
   };
 }
