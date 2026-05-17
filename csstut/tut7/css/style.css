@@ -1,0 +1,123 @@
+
+
+body{
+animation: change-color 3s infinite alternate;
+
+}
+
+@keyframes change-color {
+0%    {background-color: aliceblue;}
+50% {background-color:aquamarine;}
+100% {background-color:rgb(71, 44, 105);}
+}
+
+@keyframes skew {
+0%    {transform: skew(0deg, 0deg);}
+50% {transform: skew(30deg, 20deg);}
+100% {transform: skew(-30deg, -20deg);}
+}
+
+.title {
+font-family: 'Courier New', Courier, monospace;
+text-align: center;
+margin: 160px auto;
+animation: skew 3s infinite alternate;
+}
+
+.square{
+background-color: rgb(255, 142, 3);
+width: 200px;
+height: 200px;
+border-radius: 50px;
+margin: 50px auto;
+transition: all 1s;
+}
+
+.square:hover {
+background-color: greenyellow;
+transform: rotate(135deg);
+
+
+}
+
+
+
+.circle {
+    background-color: rgb(50, 163, 223);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 50px auto;
+    transition: all 1s;
+    animation: randomMove 2s infinite;
+}
+
+.circle2 {
+    background-color: rgb(255, 0, 0);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 50px auto;
+    transition: all 3s;
+}
+
+.circle2:hover {
+    transform: scale(1000%);
+}
+
+@keyframes randomMove {
+    0% {
+        background-color: rgb(50, 163, 223);
+        transform: scale(1);
+        border-radius: 100%;
+    }
+
+    25% {
+        background-color: greenyellow;
+        transform: scale(0.8);
+        border-radius: 40%;
+    }
+
+    50% {
+        background-color: hotpink;
+        transform:  scale(1.2);
+        border-radius: 10%;
+    }
+
+    75% {
+        background-color: orange;
+        transform:  scale(0.6);
+        border-radius: 70%;
+    }
+
+    100% {
+        background-color: rgb(50, 163, 223);
+        transform:  scale(1);
+        border-radius: 100%;
+    }
+}
+
+.button{
+background-color: rgb(82, 148, 43);
+color: white;
+padding: 15px;
+margin: 50px auto;
+display: inline-block;
+width: 100px;
+text-decoration: none;
+transition: all .5s;
+
+}
+
+.button:hover{
+background-color: rgb(255, 255, 255);
+color: rgb(82, 148, 43);;
+transform: scale(1.5);
+
+}
+
+
+.button-div{
+
+    text-align: center;
+}
