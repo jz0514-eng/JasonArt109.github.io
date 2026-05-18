@@ -1,0 +1,20 @@
+{
+  "name": "drawing-app",
+  "version": "1.0.0",
+  "description": "drawing app testing",
+  "keywords": [
+    "12345"
+  ],
+  "license": "ISC",
+  "author": "Jason Zheng",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  }
+}
