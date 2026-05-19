@@ -43,14 +43,13 @@ img {
 
 
 :root {
-    --bg-color-1: #111;
-    --bg-color-2: #fcfcfc;
-    --font: #f9f9f7;
-    --accent-1: #b7fa70;
-    --accent-2: #d3acfa;
-    --dark: #222;
+    --bg-color-1: #f3fff4;
+    --bg-color-2: #AFD5AA;
+    --font: #082f37;
+    --accent-1: #A69F98;
+    --accent-2: #8C6057;
+    --dark: #2c2c2c;
 }
-
 /* General CSS */
 
 html {
@@ -74,8 +73,8 @@ header {
 }
 
 header h1 {
-    text-shadow: -5px 5px 0px #00e6e6cc, -10px 10px 0px #01cccc99,
-        -15px 15px 0px #00bdbd44;
+    text-shadow: -5px 5px 0px #90a0c2cc, -10px 10px 0px #9fdddd99,
+        -15px 15px 0px #f6ffff44;
 }
 
 nav a {
