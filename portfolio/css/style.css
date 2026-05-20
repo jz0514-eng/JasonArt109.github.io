@@ -43,7 +43,7 @@ img {
 
 
 :root {
-    --bg-color-1: #f3fff4;
+    --bg-color-1: #f7fff8;
     --bg-color-2: #AFD5AA;
     --font: #082f37;
     --accent-1: #A69F98;
@@ -159,6 +159,31 @@ main {
     }
 }
 
+.button{
+background-color: rgb(113, 179, 76);
+color: white;
+padding: 15px;
+margin: 50px auto;
+display: inline-block;
+text-decoration: none;
+transition: all .5s;
+font-size: 1.5rem;
+
+}
+
+.button:hover{
+background-color: rgb(203, 235, 196);
+color: rgb(67, 125, 33);;
+transform: scale(1.1);
+
+}
+
+
+.button-div{
+
+    text-align: center;
+}
+
 .about-content,
 .portfolio-content,
 .contact-content,
@@ -175,7 +200,24 @@ main {
 }
 
 .project-content {
+    
+        max-width: 60rem;
+    margin: 5rem auto;
+    padding: 2rem;
+    background-color: var(--bg-color-2);
+    border: 3px solid var(--font);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 0 var(--font);
     text-align: justify;
+
+
+}
+
+.project-content h2 {
+    
+
+    text-align:center;
+
 
 }
 
@@ -192,8 +234,10 @@ main {
 
 .portfolio-item {
     padding: 1rem;
-    background-color: var(--font);
+    background-color: rgb(108, 157, 108);
     color: var(--bg-color-1);
+        border: 1px solid var(--font);
+    border-radius: 0.3rem;
 }
 
 .portfolio-item p {
@@ -222,7 +266,7 @@ footer {
 
 footer img {
     display: inline;
-    max-width: 3 rem;
+    max-width: 3rem;
     margin: 0.5rem;
 
 }
